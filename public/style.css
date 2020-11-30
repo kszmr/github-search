@@ -1,0 +1,42 @@
+body {
+    margin-top: 15%;
+    font-family: 'Roboto', sans-serif;
+}
+
+div .header {
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+
+h1 {
+    color: #000;
+    text-align: center;
+    font-family: 'Consolas';
+    font-size: 5.5em;
+}
+
+input[type=text] {
+    font-size: 1.5rem;
+    border: 1px solid #000;
+    border-radius: 0px;
+    height: 60px;
+}
+
+.search {
+    border: 1px solid #000;
+    border-radius: 0px;
+    background-color: #000;
+    height: 70px;
+    width: 140px;
+}
+
+.fa-search {
+    width: 100px;
+}
+
+.btn-dark {
+    border: 1px solid #000;
+    border-radius: 0px;
+    background-color: #000;
+}
