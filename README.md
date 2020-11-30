@@ -1,5 +1,7 @@
 # github-search
 
+## See it live [here](https://quizzical-hawking-1b32c7.netlify.app/)!
+
 ## Project setup
 ```
 npm install
