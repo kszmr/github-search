@@ -31,6 +31,8 @@ export default {
           github: {
               url: 'https://api.github.com/users',
               count: 7,
+              client_id: '3a12789ec41d033a36d4',
+              client_secret: '4ad7e8f0461184467be54b06cf9b0b01811ec2e7',
               sort: "created: asc"
           },
           user: [],
@@ -48,13 +50,13 @@ export default {
         const { url, client_id, client_secret, count, sort } = this.github;
         axios
             .get(
-                `${url}/${user}?client_id=${process.env.VUE_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.VUE_APP_GITHUB_CLIENT_SECRET}`
+                `${url}/${user}?client_id=${client_id}&client_secret=${client_secret}`
             )
             .then(({ data }) => (this.user = data))
             .catch(error => alert('User not found'));
         axios
             .get(
-                `${url}/${user}/repos?per-page=${count}&sort=&{sort}&client_id=${process.env.VUE_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.VUE_APP_GITHUB_CLIENT_SECRET}`
+                `${url}/${user}/repos?per-page=${count}&sort=&{sort}&client_id=${client_id}&client_secret=${client_secret}`
             )
             .then(({ data}) => this.repos = data);
     }

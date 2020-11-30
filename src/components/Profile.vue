@@ -9,7 +9,7 @@
                     <li class="list-group-item">Following: <span class="badge badge-success">{{ user.following }}</span></li>
                 </ul>
                 <div class="card-body">
-                    <a href="user.html_url" class="btn btn-dark btn-block">See profile</a>
+                    <a :href="url" target="blank" class="btn btn-dark btn-block">See profile</a>
                 </div>
             </div>
         </div>
@@ -18,6 +18,11 @@
 
 <script>
 export default {
-    props: ["user"]
+    props: ["user"],
+        data() {
+            return { 
+                url: `https://github.com/${this.user.login}`
+            }
+        }
 };
 </script>
